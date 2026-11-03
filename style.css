@@ -91,6 +91,8 @@ button.cta {
   padding: 20px 30px;
   box-shadow: 0 0 0 10px rgba(0, 127, 255, 0.15);
   border-radius: 10px;
+  border: none;
+  cursor: pointer;
   text-decoration: none;
 }
 a.cta.alt,
@@ -105,6 +107,7 @@ nav {
   box-shadow: 0 5px 8 px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 nav a.logo {
   display: block;
@@ -145,20 +148,150 @@ nav ul li a {
 .more-info {
   text-align: center;
 }
+.more-info p {
+  margin: 18px 0 35px;
+}
 .desc {
   text-align: center;
 }
-
-/*   < <nav>
-      <a href="#" class="logo">The Soldiers</a>
-      <ul>
-        <li>
-          <a href="#">Sign Up</a>
-        </li>
-        <li><a href="#story">The Story</a></li>
-        <li>
-          <a href="#more-info">More Info</a>
-        </li>
-      </ul>
-    </nav>
+.highlight {
+  background-color: rgb(165, 214, 165);
+  color: rgb(0, 95, 0);
+  padding: 5px 10px;
+  display: inline;
+  font-weight: 800;
+}
+.sep {
+  width: 470px;
+  height: 10px;
+  background-color: #111111;
+  margin: 70px auto;
+}
+.story h3 {
+  font-size: 40px;
+}
+.nb-list {
+  width: 470px;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  background-color: #ededed;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+.nb-list li {
+  height: 70px;
+  border-radius: 10px;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+.nb-list li.dragging {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  right: -30px;
+  transform: rotate(6deg);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+}
+.nb-list li.red {
+  background-color: red;
+}
+.nb-list li.blue {
+  background-color: blue;
+}
+.nb-list li.gray {
+  background-color: gray;
+}
+.nb-list li.pink {
+  background-color: pink;
+}
+.nb-list li.salmon {
+  background-color: salmon;
+}
+.nb-list li.yellow {
+  background-color: yellow;
+  color: #111111;
+}
+.nb-list li.yellowdragging {
+  background-color: yellow;
+  color: #111111;
+}
+.nb-list li.pink {
+  background-color: pink;
+}
+.nb-list li.salmon {
+  background-color: salmon;
+}
+.nb-list li.yellowdragging {
+  position: absolute;
+  top: 1460px;
+  left: 25px;
+  right: 0px;
+  width: 427px;
+  transform: rotate(4deg);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+}
+.nb-list li.yellowdragging:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  background: url("img/hand.webp") no-repeat center center;
+  background-size: 100%;
+  bottom: 0;
+  left: 330px;
+}
+.reunion {
+  display: block;
+  margin: 0 auto;
+}
+footer {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  margin: 85px 0 45px;
+  font-weight: bold;
+}
+footer a {
+  color: rgba(0, 0, 0, 0.4);
+}
+.popup {
+  display: none;
+}
+/*      <div class="sep"></div>
+    <div class="story" id="story">
+      <ul class="nb-list"></ul>
+      <li class="blue">Buster Sword</li>
+      <li class="gray">&nbsp;</li>
+      <li class="yellowdragging">Masamune</li>
+      <li class="red">Blade Cycle</li>
+      <li class="pink">Fusion Sword</li>
+      <li class="salmon">Ultima Weapon</li>
+      <li class="blue">Missing Score</li>
+      <li class="yellow">Venus Gospel</li>
+      <h3>Left: Our Valuable Items<br />Below: Our Story</h3>
+      <p>
+        Cloud Strife grew up idolizing Sephiroth, Shinra's greatest SOLDIER, and
+        dreamed of becoming just like him.
+      </p>
+      <p>
+        However, Cloud failed to qualify for SOLDIER and instead became an
+        ordinary infantryman.
+      </p>
+      <p>
+        Meanwhile, Zack Fair, a talented and charismatic SOLDIER First Class,
+        befriended Sephiroth and became one of his closest comrades.
+      </p>
+      <p>
+        During a mission to Cloud's hometown of Nibelheim, Sephiroth discovered
+        that he had been created through experiments involving Jenova, an
+        extraterrestrial being whose cells had been used by Shinra scientists.
+        Horrified by his origins, Sephiroth descended into madness, burned
+        Nibelheim, and attempted to reach Jenova's body in a nearby reactor.
+      </p>
+    </div>
+    <div class="sep"></div>
     */
