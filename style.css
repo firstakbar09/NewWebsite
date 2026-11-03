@@ -259,6 +259,7 @@ footer a {
   color: rgba(0, 0, 0, 0.4);
 }
 .popup {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -283,7 +284,9 @@ footer a {
   text-align: center;
   position: absolute;
   left: 50%;
+  top: 50%;
   margin-left: -480px;
+  margin-top: -270px;
 }
 /*      <div class="sep"></div>
     <div class="story" id="story">
