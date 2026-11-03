@@ -87,6 +87,11 @@ button.cta.alt {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 0 10px rgba(0, 127, 255, 0.15);
 }
+nav {
+  height: 100px;
+  background-color: white;
+  box-shadow: 0 5px 8 px rgba(0, 0, 0, 0.2);
+}
 /*   <div class=".hero-banner">
       <div class="wrapper">
         <h4>
