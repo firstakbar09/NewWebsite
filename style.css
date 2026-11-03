@@ -287,38 +287,102 @@ footer a {
   top: 50%;
   margin-left: -480px;
   margin-top: -270px;
+  z-index: 3;
 }
-/*      <div class="sep"></div>
-    <div class="story" id="story">
-      <ul class="nb-list"></ul>
-      <li class="blue">Buster Sword</li>
-      <li class="gray">&nbsp;</li>
-      <li class="yellowdragging">Masamune</li>
-      <li class="red">Blade Cycle</li>
-      <li class="pink">Fusion Sword</li>
-      <li class="salmon">Ultima Weapon</li>
-      <li class="blue">Missing Score</li>
-      <li class="yellow">Venus Gospel</li>
-      <h3>Left: Our Valuable Items<br />Below: Our Story</h3>
-      <p>
-        Cloud Strife grew up idolizing Sephiroth, Shinra's greatest SOLDIER, and
-        dreamed of becoming just like him.
-      </p>
-      <p>
-        However, Cloud failed to qualify for SOLDIER and instead became an
-        ordinary infantryman.
-      </p>
-      <p>
-        Meanwhile, Zack Fair, a talented and charismatic SOLDIER First Class,
-        befriended Sephiroth and became one of his closest comrades.
-      </p>
-      <p>
-        During a mission to Cloud's hometown of Nibelheim, Sephiroth discovered
-        that he had been created through experiments involving Jenova, an
-        extraterrestrial being whose cells had been used by Shinra scientists.
-        Horrified by his origins, Sephiroth descended into madness, burned
-        Nibelheim, and attempted to reach Jenova's body in a nearby reactor.
-      </p>
+.popup.open {
+  display: block;
+}
+.popup .item {
+  margin-bottom: 8px;
+}
+.popup label {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.popup input {
+  font-size: 20px;
+  padding: 4px 8px;
+}
+.popup .close {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.popup .content {
+  z-index: 3; /* if you haven't added this yet */
+}
+
+/* Red circle X on the corner of the box */
+.popup .close {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  background: #f0400f;
+  color: white;
+  font-size: 50px;
+  line-height: 70px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Two-column form */
+.popup form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.popup .item {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  text-align: left;
+}
+.popup label {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.popup input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 4px solid #111;
+  margin-bottom: 20px;
+}
+.popup button.cta {
+  margin-top: 20px;
+  background: #1a7ff0; /* the blue from the tutorial */
+}
+
+/*    <div class="popup"></div>
+    <div class="blanket"></div>
+    <div class="content">
+      <h2>Fill In Your Details</h2>
+      <form action="">
+        <div class="item">
+          <label for="Your First Name"></label>
+          <input type="text" placeholder="Aerith" value="Soldier" />
+        </div>
+        <div class="item">
+          <label for="Your Last Name"></label>
+          <input type="text" placeholder="Gainsborough" />
+        </div>
+        <div class="item">
+          <label for="Your Favorite Weapon"></label>
+          <input type="text" placeholder="Fusion Sword" />
+        </div>
+        <div class="item">
+          <label for="Your Favorite Character"></label>
+          <input type="text" placeholder="Cloud" />
+        </div>
+        <button class="cta">I Want In!</button>
+      </form>
+      <button class="close">Close</button>
     </div>
-    <div class="sep"></div>
     */

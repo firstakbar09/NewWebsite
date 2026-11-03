@@ -29,7 +29,7 @@
       <a href="#" class="logo">The Soldiers</a>
       <ul>
         <li>
-          <a href="#">Sign Up</a>
+          <a href="#" id="signup-link">Sign Up</a>
         </li>
         <li><a href="#story">The Story</a></li>
         <li>
@@ -44,7 +44,7 @@
           Join the <span class="highlight">Soldiers</span> in our exclusive
           team. Level up your Attacks and Magic Skills. Interested?
         </p>
-        <button class="cta">I'm Interested</button>
+        <button class="cta" id="open-popup">I'm Interested</button>
       </div>
     </div>
     <div class="sep"></div>
@@ -94,30 +94,66 @@
         <a href="https://www.hccc.edu/index.html">HCCC</a>
       </div>
     </footer>
-    <div class="popup"></div>
-    <div class="blanket"></div>
-    <div class="content">
-      <h2>Fill In Your Details</h2>
-      <form action="">
-        <div class="item">
-          <label for="Your First Name"></label>
-          <input type="text" placeholder="Aerith" value="Soldier" />
-        </div>
-        <div class="item">
-          <label for="Your Last Name"></label>
-          <input type="text" placeholder="Gainsborough" />
-        </div>
-        <div class="item">
-          <label for="Your Favorite Weapon"></label>
-          <input type="text" placeholder="Fusion Sword" />
-        </div>
-        <div class="item">
-          <label for="Your Favorite Character"></label>
-          <input type="text" placeholder="Cloud" />
-        </div>
-        <button class="cta">I Want In!</button>
-      </form>
-      <button class="close">Close</button>
+    <div class="popup" id="popup">
+      <div class="blanket"></div>
+      <div class="content">
+        <h2>Fill In Your Details</h2>
+        <form action="">
+          <div class="item">
+            <label for="first-name">Your First Name</label>
+            <input
+              id="first-name"
+              type="text"
+              placeholder="Aerith"
+              value="Soldier"
+            />
+          </div>
+          <div class="item">
+            <label for="last-name">Your Last Name</label>
+            <input id="last-name" type="text" placeholder="Gainsborough" />
+          </div>
+          <div class="item">
+            <label for="weapon">Your Favorite Weapon</label>
+            <input id="weapon" type="text" placeholder="Fusion Sword" />
+          </div>
+          <div class="item">
+            <label for="character">Your Favorite Character</label>
+            <input id="character" type="text" placeholder="Cloud" />
+          </div>
+          <button type="button" class="cta">I Want In!</button>
+        </form>
+        <button type="button" class="close" id="close-popup" aria-label="Close">
+          ×
+        </button>
+      </div>
     </div>
+    <script>
+      const popup = document.querySelector(".popup");
+      const closeBtn = document.querySelector(".popup .close");
+      const blanket = document.querySelector(".popup .blanket");
+
+      function openPopup(e) {
+        e.preventDefault();
+        popup.classList.add("open");
+      }
+      function closePopup() {
+        popup.classList.remove("open");
+      }
+
+      document
+        .querySelector("#open-popup")
+        .addEventListener("click", openPopup);
+      document
+        .querySelector("#signup-link")
+        .addEventListener("click", openPopup);
+      closeBtn.addEventListener("click", closePopup);
+      blanket.addEventListener(
+        "click",
+        closePopup,
+      ); /* click the dark area to close */
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closePopup();
+      });
+    </script>
   </body>
 </html>
